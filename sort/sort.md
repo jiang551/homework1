@@ -127,4 +127,4 @@
 ---
 
 **附：核心代码仓库**  
-[GitHub 链接：https://github.com/XXX/sorting-algorithms]
+[GitHub 链接：[https://github.com/XXX/sorting-algorithms](https://github.com/jiang551/homework1.git)]
