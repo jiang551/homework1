@@ -1,0 +1,43 @@
+C51 COMPILER V9.60.7.0   NIXIE                                                             04/03/2025 09:40:14 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE NIXIE
+OBJECT MODULE PLACED IN .\Objects\Nixie.obj
+COMPILER INVOKED BY: D:\keil5\C51\BIN\C51.EXE Nixie.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\Nixie
+                    -.lst) TABS(2) OBJECT(.\Objects\Nixie.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "delay.h"
+   3          const unsigned char n[10]={0xc0,0x0f9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x780,0x90};
+   4          void Nixie(unsigned char location,number)
+   5          {
+   6   1        switch(location)
+   7   1        {
+   8   2          case 1:P2_4=1;P2_3=1;P2_2=1;break;
+   9   2          case 2:P2_4=1;P2_3=1;P2_2=0;break;
+  10   2          case 3:P2_4=1;P2_3=0;P2_2=1;break;
+  11   2          case 4:P2_4=1;P2_3=0;P2_2=0;break;
+  12   2          case 5:P2_4=0;P2_3=1;P2_2=1;break;
+  13   2          case 6:P2_4=0;P2_3=1;P2_2=0;break;
+  14   2          case 7:P2_4=0;P2_3=0;P2_2=1;break;
+  15   2          case 8:P2_4=0;P2_3=0;P2_2=0;break;
+  16   2        }
+  17   1        P0=n[number];
+  18   1        Delay1ms(1);
+  19   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    105    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     10    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
